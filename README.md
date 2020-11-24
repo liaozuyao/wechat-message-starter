@@ -3,8 +3,8 @@
 ### 相关yml配置信息
 wechat:
   xxx:
-    appId: wxaba8345e57d9cb3e
-    secret: 97aa00b442fd05191aada4484a184a6a
+    appId: yourwechatappid
+    secret: yourwechatsecret
 
 ####相关参数组装
 List<WxMpTemplateData> wxMpTemplateData = new ArrayList<>();
