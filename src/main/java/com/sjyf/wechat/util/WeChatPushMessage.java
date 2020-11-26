@@ -26,8 +26,9 @@ public class WeChatPushMessage {
      * @param openId  推送微信用户的openId
      * @param templateId  模板消息的Code
      * @param wxMpTemplateData 模板消息的内容 详见.md
+     * @param url 点击推送消息跳转的页面url
      */
-    public void pushWeChatMessage(String openId, String templateId, List<WxMpTemplateData> wxMpTemplateData){
+    public void pushWeChatMessage(String openId, String templateId, String url, List<WxMpTemplateData> wxMpTemplateData){
         //1-配置
         WxMpInMemoryConfigStorage wxStorage = new WxMpInMemoryConfigStorage();
         wxStorage.setAppId(this.appId);
@@ -39,6 +40,7 @@ public class WeChatPushMessage {
         //消息模板id
         templateMessage.setTemplateId(templateId);
         templateMessage.setData(wxMpTemplateData);
+        templateMessage.setUrl(url);
         try {
             //要推送的用户openid
             templateMessage.setToUser(openId);
