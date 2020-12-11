@@ -15,4 +15,5 @@ public class WeChatPushProperties {
 
     private String appId;
     private String secret;
+    private Boolean enable = false;
 }
