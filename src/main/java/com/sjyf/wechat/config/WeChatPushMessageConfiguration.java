@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @RequiredArgsConstructor
 @EnableConfigurationProperties(WeChatPushProperties.class)
-@ConditionalOnProperty(prefix = "wechat.xxx")
+@ConditionalOnProperty(prefix = "wechat.xxx", value = "enable", havingValue = "true")
 public class WeChatPushMessageConfiguration {
 
     private final WeChatPushProperties weChatPushProperties;
