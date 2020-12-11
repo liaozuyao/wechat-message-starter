@@ -5,6 +5,7 @@ wechat:
   xxx:
     appId: yourwechatappid
     secret: yourwechatsecret
+    enable: true
 
 ####相关参数组装
 List<WxMpTemplateData> wxMpTemplateData = new ArrayList<>();
